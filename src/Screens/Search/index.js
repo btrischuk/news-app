@@ -1,14 +1,28 @@
 import React, {Component} from 'react';
-import { View, Text, Stylesheet } from 'react-native';
+import image from 'images'
+import { Container, Header, Item, Input, Icon, Button, Text, Content } from 'react-native';
+
 
 class Search extends Component{
   render() {
     return (
-      <View style={{justifyContent: 'center', alignItems: 'center', flex: 1}}>
+      <Container>
+      <Header searchBar rounded>
+        <Item>
+          <Icon name="ios-search" />
+          <Input placeholder="Search" />
+          <Icon name="ios-people" />
+        </Item>
+        <Button transparent>
+          <Text>Search</Text>
+        </Button>
+      </Header>
+      <Content>
         <Text>
-          Search
+          hello
         </Text>
-      </View>
+      </Content>
+    </Container>
     )
   }
 }
